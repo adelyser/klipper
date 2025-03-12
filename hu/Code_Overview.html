@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.1.3">
     
     
       
@@ -46,8 +46,8 @@
   
 
 
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-138371409-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-VEN1PGNQL4"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-VEN1PGNQL4",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEN1PGNQL4"></script>
 
 
     
@@ -408,10 +408,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="Installation.html" class="md-nav__link">
         Telepítés
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OctoPrint.html" class="md-nav__link">
+        OctoPrint a Klipper-hez
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -610,6 +657,20 @@
     <li class="md-nav__item">
       <a href="Endstop_Phase.html" class="md-nav__link">
         Végállás fázis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Axis_Twist_Compensation.html" class="md-nav__link">
+        Tengely fordulat kompenzáció
       </a>
     </li>
   
@@ -1240,8 +1301,36 @@
   
   
     <li class="md-nav__item">
+      <a href="Bootloader_Entry.html" class="md-nav__link">
+        Bootloader belépés
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="CANBUS.html" class="md-nav__link">
         CANBUS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Hibaelhárítás
       </a>
     </li>
   
@@ -1270,6 +1359,20 @@
     <li class="md-nav__item">
       <a href="Hall_Filament_Width_Sensor.html" class="md-nav__link">
         Hall nyomtatószál szélesség érzékelő
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Eddy_Probe.html" class="md-nav__link">
+        Örvényáramú induktív szonda
       </a>
     </li>
   
@@ -1477,7 +1580,7 @@
 <li>Tekintsd át a klippy/kinematics/ könyvtárban található kinematikai osztályokat. A kinematikai osztályok feladata egy cartesian koordinátákban megadott mozgás átalakítása az egyes léptetőkön történő mozgássá. Kiindulópontként le kell tudni másolni az egyik ilyen fájlt.</li>
 <li>Implementáljuk a C léptetőket kinematikai pozíciófüggvényeit minden léptetőhöz, ha azok még nem állnak rendelkezésre (lásd a kin_cart.c, kin_corexy.c és kin_delta.c fájlokat a klippy/chelper/ állományban). A függvénynek meg kell hívnia <code>move_get_coord()</code>, hogy egy adott mozgásidőt (másodpercben) cartesian koordinátává (milliméterben) konvertáljon, majd ebből a cartesian koordinátából kiszámítsa a kívánt léptető pozíciót (milliméterben).</li>
 <li>Az új kinematikai osztályban implementáljuk a <code>calc_position()</code> módszert. Ez a metódus kiszámítja a nyomtatófej pozícióját cartesian koordinátákban az egyes léptetőmotorok pozíciójából. Nem kell, hogy hatékony legyen, mivel jellemzően csak a kezdőpont és az érintési műveletek során hívjuk meg.</li>
-<li>Other methods. Implement the <code>check_move()</code>, <code>get_status()</code>, <code>get_steppers()</code>, <code>home()</code>, <code>clear_homing_state()</code>, and <code>set_position()</code> methods. These functions are typically used to provide kinematic specific checks. However, at the start of development one can use boiler-plate code here.</li>
+<li>Egyéb módszerek. A <code>check_move()</code>, <code>get_status()</code>, <code>get_steppers()</code>, <code>home()</code>, <code>clear_homing_state()</code> és <code>set_position()</code> metódusok végrehajtása. Ezek a függvények jellemzően kinematikai specifikus ellenőrzések biztosítására szolgálnak. A fejlesztés kezdetén azonban használhatunk itt kazánszerű kódot is.</li>
 <li>Tesztelési esetek végrehajtása. Készíts egy G-kód fájlt egy sor olyan mozgással, amelyekkel az adott kinematika fontos eseteit tesztelheted. Kövesd a <a href="Debugging.html">Hibakeresési dokumentációt</a>, hogy ezt a G-kód fájlt mikrokontroller parancsokká alakítsd át. Ez hasznos a sarokesetek gyakorlására és a regressziók ellenőrzésére.</li>
 </ol>
 <h2 id="portolas-uj-mikrokontrollerre">Portolás új mikrokontrollerre<a class="headerlink" href="#portolas-uj-mikrokontrollerre" title="Permanent link">&para;</a></h2>

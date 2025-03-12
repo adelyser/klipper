@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.4, mkdocs-material-8.1.3">
     
     
       
@@ -46,8 +46,8 @@
   
 
 
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-138371409-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-VEN1PGNQL4"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-VEN1PGNQL4",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEN1PGNQL4"></script>
 
 
     
@@ -410,10 +410,57 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="Installation.html" class="md-nav__link">
         Telepítés
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="OctoPrint.html" class="md-nav__link">
+        OctoPrint a Klipper-hez
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1500,8 +1547,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aip31068_spi-display" class="md-nav__link">
-    aip31068_spi display
+  <a href="#aip31068_spi-kijelzo" class="md-nav__link">
+    aip31068_spi kijelző
   </a>
   
 </li>
@@ -1924,6 +1971,20 @@
     <li class="md-nav__item">
       <a href="Endstop_Phase.html" class="md-nav__link">
         Végállás fázis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Axis_Twist_Compensation.html" class="md-nav__link">
+        Tengely fordulat kompenzáció
       </a>
     </li>
   
@@ -2455,8 +2516,36 @@
   
   
     <li class="md-nav__item">
+      <a href="Bootloader_Entry.html" class="md-nav__link">
+        Bootloader belépés
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="CANBUS.html" class="md-nav__link">
         CANBUS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Hibaelhárítás
       </a>
     </li>
   
@@ -2485,6 +2574,20 @@
     <li class="md-nav__item">
       <a href="Hall_Filament_Width_Sensor.html" class="md-nav__link">
         Hall nyomtatószál szélesség érzékelő
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Eddy_Probe.html" class="md-nav__link">
+        Örvényáramú induktív szonda
       </a>
     </li>
   
@@ -3552,8 +3655,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aip31068_spi-display" class="md-nav__link">
-    aip31068_spi display
+  <a href="#aip31068_spi-kijelzo" class="md-nav__link">
+    aip31068_spi kijelző
   </a>
   
 </li>
@@ -5215,7 +5318,7 @@ cs_pin:
 </code></pre></div>
 
 <h3 id="lis3dh">[lis3dh]<a class="headerlink" href="#lis3dh" title="Permanent link">&para;</a></h3>
-<p>Support for LIS3DH accelerometers.</p>
+<p>LIS3DH gyorsulásmérők támogatása.</p>
 <div class="highlight"><pre><span></span><code>[lis3dh]
 #cs_pin:
 #   The SPI enable pin for the sensor. This parameter must be provided
@@ -5564,7 +5667,7 @@ sensor_type: ldc1612
 </code></pre></div>
 
 <h3 id="axis_twist_compensation">[axis_twist_compensation]<a class="headerlink" href="#axis_twist_compensation" title="Permanent link">&para;</a></h3>
-<p>A tool to compensate for inaccurate probe readings due to twist in X or Y gantry. See the <a href="Axis_Twist_Compensation.html">Axis Twist Compensation Guide</a> for more detailed information regarding symptoms, configuration and setup.</p>
+<p>Az X vagy Y portál csavarodásából adódó pontatlan szondamérések kompenzálására szolgáló eszköz. A tünetekkel, konfigurációval és beállítással kapcsolatos részletesebb információkért lásd a <a href="Axis_Twist_Compensation.html">finomhangolás</a> című dokumentumot.</p>
 <div class="highlight"><pre><span></span><code>[axis_twist_compensation]
 #speed: 50
 #   The speed (in mm/s) of non-probing moves during the calibration.
@@ -7418,8 +7521,8 @@ spi_software_miso_pin:
 ...
 </code></pre></div>
 
-<h4 id="aip31068_spi-display">aip31068_spi display<a class="headerlink" href="#aip31068_spi-display" title="Permanent link">&para;</a></h4>
-<p>Information on configuring an aip31068_spi display - a very similar to hd44780_spi a 20x04 (20 symbols by 4 lines) display with slightly different internal protocol.</p>
+<h4 id="aip31068_spi-kijelzo">aip31068_spi kijelző<a class="headerlink" href="#aip31068_spi-kijelzo" title="Permanent link">&para;</a></h4>
+<p>Információ az aip31068_spi kijelző konfigurálásáról - a hd44780_spi-hez nagyon hasonló 20x04 (20 szimbólum 4 soros) kijelző, kissé eltérő belső protokollal.</p>
 <div class="highlight"><pre><span></span><code>[display]
 lcd_type: aip31068_spi
 latch_pin:
@@ -8032,7 +8135,7 @@ serial:
 </code></pre></div>
 
 <h3 id="angle">[angle]<a class="headerlink" href="#angle" title="Permanent link">&para;</a></h3>
-<p>Magnetic hall angle sensor support for reading stepper motor angle shaft measurements using a1333, as5047d, mt6816, mt6826s, or tle5012b SPI chips. The measurements are available via the <a href="API_Server.html">API Server</a> and <a href="Debugging.html#motion-analysis-and-data-logging">motion analysis tool</a>. See the <a href="G-Codes.html#angle">G-Code reference</a> for available commands.</p>
+<p>Mágneses Hall-szögérzékelő támogatás a1333, as5047d, mt6816, mt6826s, vagy tle5012b SPI chipek használatával a léptetőmotorok szögtengely méréseinek leolvasásához. A mérések az <a href="API_Server.html">API Szerver</a> és a <a href="Debugging.html#motion-analysis-and-data-logging">mozgáselemző eszköz</a> segítségével érhetők el. A rendelkezésre álló parancsokat lásd a <a href="G-Codes.html#angle">G-kód referencia</a>.</p>
 <div class="highlight"><pre><span></span><code>[angle my_angle_sensor]
 sensor_type:
 #   The type of the magnetic hall sensor chip. Available choices are
@@ -8081,7 +8184,7 @@ cs_pin:
 <h3 id="gyakori-i2c-beallitasok">Gyakori I2C beállítások<a class="headerlink" href="#gyakori-i2c-beallitasok" title="Permanent link">&para;</a></h3>
 <p>A következő paraméterek általában az I2C-buszt használó eszközökhöz állnak rendelkezésre.</p>
 <p>Vedd figyelembe, hogy a Klipper jelenlegi mikrokontroller I2C támogatása általában nem tolerálja a hálózati zajt. Az I2C vezetékek nem várt hibái a Klipper futásidejű hibaüzenetét eredményezhetik. A Klipper hibaelhárítási támogatása az egyes mikrokontroller-típusoknál eltérő. Általában csak olyan I2C eszközök használata ajánlott, amelyek ugyanazon a nyomtatott áramköri lapon vannak, mint a mikrokontroller.</p>
-<p>Most Klipper micro-controller implementations only support an <code>i2c_speed</code> of 100000 (<em>standard mode</em>, 100kbit/s). The Klipper "Linux" micro-controller supports a 400000 speed (<em>fast mode</em>, 400kbit/s), but it must be <a href="RPi_microcontroller.html#optional-enabling-i2c">set in the operating system</a> and the <code>i2c_speed</code> parameter is otherwise ignored. The Klipper "RP2040" micro-controller and ATmega AVR family and some STM32 (F0, G0, G4, L4, F7, H7) support a rate of 400000 via the <code>i2c_speed</code> parameter. All other Klipper micro-controllers use a 100000 rate and ignore the <code>i2c_speed</code> parameter.</p>
+<p>A legtöbb Klipper mikrokontroller implementáció csak 100000-es „i2c_speed”-et támogat (<em>standard mód</em>, 100kbit/s). A Klipper „Linux” mikrokontroller támogatja a 400000 sebességet (<em>gyors mód</em>, 400kbit/s), de ezt az <a href="RPi_microcontroller.html#optional-enabling-i2c">I2C engedélyezése</a> részen kell beállítani, és az <code>i2c_speed</code> paramétert egyébként figyelmen kívül hagyni. A Klipper „RP2040” mikrokontroller és az ATmega AVR család és néhány STM32 (F0, G0, G4, L4, F7, H7) támogatja a 400000-es sebességet az <code>i2c_speed</code> paraméteren keresztül. Az összes többi Klipper mikrovezérlő 100000-es sebességet használ, és figyelmen kívül hagyja az <code>i2c_speed</code> paramétert.</p>
 <div class="highlight"><pre><span></span><code>#i2c_address:
 #       Az eszköz I2C címe. Ezt decimális számként kell megadni (nem
 #       hexadecimális formában).
@@ -8125,7 +8228,7 @@ cs_pin:
     <nav class="md-footer__inner md-grid" aria-label="Élőláb">
       
         
-        <a href="Installation.html" class="md-footer__link md-footer__link--prev" aria-label="Előző: Telepítés" rel="prev">
+        <a href="OctoPrint.html" class="md-footer__link md-footer__link--prev" aria-label="Előző: OctoPrint a Klipper-hez" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -8134,7 +8237,7 @@ cs_pin:
               <span class="md-footer__direction">
                 Előző
               </span>
-              Telepítés
+              OctoPrint a Klipper-hez
             </div>
           </div>
         </a>
